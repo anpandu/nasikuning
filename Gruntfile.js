@@ -355,6 +355,13 @@ module.exports = function (grunt) {
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
           dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          cwd: 'bower_components/ckeditor',
+          src: [
+            '**'
+          ],
+          dest: '<%= yeoman.dist %>'
         }]
       },
       styles: {
@@ -367,7 +374,7 @@ module.exports = function (grunt) {
         expand: true,
         cwd: '<%= yeoman.dist %>',
         src: '**',
-        dest: '/var/www/project/nasikuning/'
+        dest: '/var/www/html/nasikuning/'
       },
     },
 
