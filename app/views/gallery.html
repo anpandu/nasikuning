@@ -6,7 +6,7 @@
 </div>
 
 
-<div class="row marketing">
+<!-- <div class="row marketing">
 	<form>
 		<div class="form-group">
 			<label for="exampleInputFile">File input</label>
@@ -19,20 +19,39 @@
 		</div>
 		<button type="submit" class="btn btn-default">Upload</button>
 	</form>
+</div> -->
+
+<div id="img-slider" class="row marketing">
+	<img ng-repeat="image in images" 
+		ng-mouseover="bigImage.setSrc(image)" 
+		ng-mousedown="bigImage.setPermaSrc(image)" 
+		ng-mouseout="bigImage.applyPermaSrc()"
+		src="{{image}}" alt="gambar" class="img-small">
 </div>
-<div class="row marketing">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
-	<img src="http://a.thumbs.redditmedia.com/Yb4XQUkhtQ-UVXH08RWWWRWlr9_u-aKjbPjoqDM43i0.jpg" alt="gambar" class="img-thumbnail">
+
+
+<div class="row">
+	<div id="img-big" class="col-md-8">
+		<img src="{{bigImage.src}}"/>
+	</div>
+	<div class="col-md-4">
+		<form>
+			<div class="form-group">
+				<label for="gallery-url">URL</label>
+				<input type="text" class="form-control" id="gallery-url" placeholder="filename.jpg">
+			</div>
+			<div class="form-group">
+				<label for="gallery-category">Category</label>
+				<input type="text" class="form-control" id="gallery-category" placeholder="uncategorized">
+			</div>
+			<div class="form-group">
+				<label for="gallery-description" class="control-label">Description</label>
+				<textarea class="form-control" id="gallery-description" placeholder="description" rows="10"></textarea>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-default">Update</button>
+				<button class="btn btn-default">Delete</button>
+			</div>
+		</form>
+	</div>
 </div>

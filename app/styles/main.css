@@ -53,7 +53,7 @@ body {
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+  margin: 20px 0;
 }
 .marketing p + h4 {
   margin-top: 28px;
@@ -62,7 +62,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 960px;
+    /*max-width: 960px;*/
   }
 
   /* Remove the padding we set earlier */
@@ -80,4 +80,31 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+
+
+img.img-small {
+  max-height: 125px;
+}
+
+
+div#img-slider {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 5px;
+}
+
+div#img-slider img {
+  margin-right: 5px;
+}
+
+div#img-big {
+  /*background-color: #f00;*/
+}
+
+div#img-big img {
+  height: 100%;
+  width: 100%;
 }
